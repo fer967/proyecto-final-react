@@ -1,0 +1,16 @@
+
+h1{
+    color: red;
+}
+
+body{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}  
+
+
+

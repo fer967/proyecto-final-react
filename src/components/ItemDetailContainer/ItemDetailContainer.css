@@ -1,0 +1,6 @@
+.detail-cont{
+    background-color: rgba(255, 0, 0, 0.382);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
