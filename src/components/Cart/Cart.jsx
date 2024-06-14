@@ -4,10 +4,8 @@ import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
 
-
 export default function Cart(){
         const{cart,clearCart,totalCont,total} = useContext(CartContext);
-        
         if(totalCont === 0){           
             return(
                 <div>
@@ -26,11 +24,4 @@ export default function Cart(){
         );
     }
 
-
-    // PRUEBAS OK
-// condicional totalCont 
-// limpiar carrito  ___  ruta a Checkout
-
-// const[total, setTotal] = useState(0);
-// setTotal(total + prod.price * prod.quantity);
 

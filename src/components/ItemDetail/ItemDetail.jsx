@@ -6,15 +6,12 @@ import { CartContext } from '../../context/CartContext';
 
 export default function ItemDetail({ id, title, image, category, description, price, stock }) {
     const [contAdded, setContAdded] = useState(0);
-
-    const {addItem} = useContext(CartContext);
-    
+    const { addItem } = useContext(CartContext);
     const handleOnAdd = (cont) => {
         setContAdded(cont)
-        const item = {id,title,price}
-        addItem(item,cont);
+        const item = { id, title, price }
+        addItem(item, cont);
     }
-
     return (
         <div className='detail'>
             <section>
@@ -28,7 +25,7 @@ export default function ItemDetail({ id, title, image, category, description, pr
             </section>
             <section>
                 {contAdded > 0 ? (
-                    <Link to='/cart' className='Option'>terminar compra</Link>
+                    <Link to='/cart' className='Option' >terminar compra</Link>
                 ) : (
                     <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
                 )

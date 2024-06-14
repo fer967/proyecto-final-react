@@ -6,16 +6,12 @@ import { Link } from 'react-router-dom';
 
 export default function CartWidget(){
     const{totalCont} = useContext(CartContext);
-
-    // link a Cart OK
     return(
         <Link to='/cart' >
-            <button className='icono'>🛒0</button>
+            <button className='icono'>🛒</button>
             {totalCont}
         </Link>
     );
 }
 
 
-//--- no aparece en navbar ---
-/*className='cart-widget' style={{display:totalCont > 0 ? 'block' : 'none'}}*/

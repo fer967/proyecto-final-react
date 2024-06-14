@@ -14,7 +14,6 @@ export default function ItemCount({ stock, initial, onAdd }) {
             setCont(cont - 1);
         }
     }
-
     return (
         <div className="container-count">
             <div className="controls">
@@ -29,4 +28,3 @@ export default function ItemCount({ stock, initial, onAdd }) {
     );
 }
 
-// reemplazo onAdd por addItem ( no anda boton agregar al carrito)
