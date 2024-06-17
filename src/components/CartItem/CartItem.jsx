@@ -1,18 +1,20 @@
 import './CartItem.css';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
-export default function CartItem(){
-    const{removeItem,cart} = useContext(CartContext);
-    return(
-        <div>
-            <p>titulo:{cart.title} </p>
-            <p>precio:{cart.price}</p>
-            <p>cantidad:</p>
-            <p>subtotal:</p>
-            <button onClick={()=>removeItem()}className='button' >x</button>
-        </div>
-    );
+export default function CartItem() {
+    const {cart,removeItem} = useContext(CartContext);
+
+    return cart.map((product) => {
+        return(
+        <div key={product.id} className='cart-item'>
+            <p>{product.title} </p>
+            <p>$ {product.price}</p>
+            <p>cantidad:{product.cont}</p>
+            <p>subtotal:$ {product.price * product.cont}</p>
+            <button onClick={()=>removeItem()}className='delete'>x</button>
+        </div>);
+        });
 }
 
 

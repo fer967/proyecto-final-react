@@ -9,7 +9,7 @@ export default function NavBar() {
         <>
             <nav className='navbar'>
                 <Link to='/'>
-                    <h3>instrumentos musicales</h3>
+                    <h2 className='title'>instrumentos musicales</h2>
                 </Link>
                 <div className='category'>
                     <NavLink to={`/category/cuerdas`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>cuerdas</NavLink>

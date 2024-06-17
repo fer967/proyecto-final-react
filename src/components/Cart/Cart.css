@@ -1,8 +1,38 @@
 .cart{
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: aquamarine;
-    
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: azure;
+    border-radius: 3px;
+    gap: 7px;
+    padding: 5px;
+}
+
+.cart-empty{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px;
 }

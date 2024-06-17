@@ -1,7 +1,7 @@
 .detail{
     width: 35vw;
     height: 84vh;
-    background-color: dimgrey;
+    background-color: rgba(105, 105, 105, 0.642);
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
