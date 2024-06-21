@@ -1,17 +1,31 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { useContext, useState } from 'react';
+import { useContext, useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 export default function ItemDetail({ id, title, image, category, description, price, stock }) {
     const [contAdded, setContAdded] = useState(0);
     const { addItem } = useContext(CartContext);
-    const handleOnAdd = (cont) => {
+
+         // modificacion (en prueba : renderiza duplicado en Cart)
+        useEffect(() => {
+            const agregar = ()=>{
+                handleOnAdd();
+            }
+            window.addEventListener('onClick',agregar);
+            return()=>{
+                window.removeEventListener('onClick',agregar);
+                }
+        },[]);
+    
+
+        const handleOnAdd = (cont) => {
         setContAdded(cont)
         const item = { id, title, price }
         addItem(item, cont);
     }
+
     return (
         <div className='detail'>
             <section>
@@ -34,3 +48,4 @@ export default function ItemDetail({ id, title, image, category, description, pr
         </div>
     );
 }
+

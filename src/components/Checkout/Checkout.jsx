@@ -27,7 +27,7 @@ export default function Checkout() {
     }
     if(pedidoId){
         return(
-            <div>
+            <div className='orden'>
                 <h1>muchas gracias por tu compra !!!</h1>
                 <p>tu numero de pedido es : {pedidoId}</p>
             </div>
@@ -35,12 +35,12 @@ export default function Checkout() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit(comprar)}>
-                <input type="text" placeholder="nombre" {...register("nombre")} />
-                <input type="email" placeholder="email" {...register("email")} />
-                <input type="text" placeholder="phone" {...register("telefono")} />
-                <button type="submit">comprar</button>
+        <div >
+            <form onSubmit={handleSubmit(comprar)} className='checkout'>
+                <input type="text" placeholder="ingrese su nombre" {...register("nombre")} />
+                <input type="email" placeholder="ingrese su email" {...register("email")} />
+                <input type="text" placeholder="ingrese su phone" {...register("telefono")} />
+                <button type="submit" className='Option'>comprar</button>
             </form>
         </div>
     );

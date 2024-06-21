@@ -1,8 +1,10 @@
 
 import './ItemCount.css';
-import { useState } from 'react';
+import { useState} from 'react';
 
 export default function ItemCount({ stock, initial, onAdd }) {
+
+    
     const [cont, setCont] = useState(initial)
     const handleInc = () => {
         if (cont < stock) {
