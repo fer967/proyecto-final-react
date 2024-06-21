@@ -1,5 +1,5 @@
-.detail{
-    width: 35vw;
+.detail-container{
+    width: 40vw;
     height: 84vh;
     background-color: rgba(105, 105, 105, 0.642);
     border: 2px solid black;
@@ -9,4 +9,17 @@
     align-items: center;
     justify-content: center;
     gap: 1px;
+    padding: 6px;
 }
+
+.item-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.item-det{
+    display: flex;
+    flex-direction: column;
+}
+

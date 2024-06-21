@@ -1,6 +1,8 @@
 .detail-cont{
-    background-color: rgba(255, 0, 0, 0.382);
+    background-color: rgba(255, 0, 0, 0.275);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    padding: 5px;
 }

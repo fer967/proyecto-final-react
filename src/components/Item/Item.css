@@ -1,0 +1,17 @@
+.single-item-container{
+    width: 40vw;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.single-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
