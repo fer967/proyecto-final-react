@@ -8,9 +8,12 @@ export function CartProvider({ children }) {
     
     const addItem = (item, cont)=>{
         if(!isInCart(item.id)){
-            setCart(prev => [...prev, {...item, cont}])
+
+            // modificacion
+            setCart([...cart,{...item,cont}]);
+
         } else{
-            console.error('el producto ya fue agregado')
+            console.error('el producto ya fue agregado');
         }
     }
 
@@ -37,4 +40,9 @@ export function CartProvider({ children }) {
         </CartContext.Provider>
     );
 }
+
+/*
+
+setCart(prev => [...prev, {...item, cont}]);
+*/
 

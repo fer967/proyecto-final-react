@@ -38,8 +38,9 @@ export default function Checkout() {
         <div >
             <form onSubmit={handleSubmit(comprar)} className='checkout'>
                 <input type="text" placeholder="ingrese su nombre" {...register("nombre")} />
-                <input type="email" placeholder="ingrese su email" {...register("email")} />
                 <input type="text" placeholder="ingrese su phone" {...register("telefono")} />
+                <input type="email" placeholder="ingrese su email" {...register("email")} />
+                <input type="email" placeholder="confirme su email" {...register("email")} />
                 <button type="submit" className='Option'>comprar</button>
             </form>
         </div>

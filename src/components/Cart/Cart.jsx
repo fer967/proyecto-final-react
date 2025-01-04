@@ -17,7 +17,7 @@ export default function Cart() {
     return (
         <div className='cart'>
             <section className='cart-item'>
-                {cart.map(p => <CartItem key={p.id} {...p} />)}
+                {cart.map(p => <CartItem key={p.id} p={p} />)}
             </section>
             <h3>total: ${total}</h3>
             <section className='button'>

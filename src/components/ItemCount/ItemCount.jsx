@@ -4,8 +4,7 @@ import { useState} from 'react';
 
 export default function ItemCount({ stock, initial, onAdd }) {
 
-    
-    const [cont, setCont] = useState(initial)
+    const [cont, setCont] = useState(initial);
     const handleInc = () => {
         if (cont < stock) {
             setCont(cont + 1);
@@ -29,4 +28,5 @@ export default function ItemCount({ stock, initial, onAdd }) {
         </div>
     );
 }
+
 

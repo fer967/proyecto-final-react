@@ -22,10 +22,10 @@ export default function ItemListContainer({ greeting }) {
             })
             setProducts(productsAdapted)
         })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [categoryId])
+        .finally(() => {
+            setLoading(false)
+        })
+    }, [categoryId]);
     return (
         <div className='container'>
             <h2>{greeting}</h2>
@@ -33,6 +33,17 @@ export default function ItemListContainer({ greeting }) {
         </div>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

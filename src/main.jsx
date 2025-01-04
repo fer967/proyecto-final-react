@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import './firebase/firebase.js';
 
-ReactDOM.createRoot(document.getElementById('root')).render(      // root esta en el index.html
+ReactDOM.createRoot(document.getElementById('root')).render(      
   <React.StrictMode>                                              
     <App />
   </React.StrictMode>,
-)
+);
 
-// inyecta aplicacion y la renderiza dentro del root

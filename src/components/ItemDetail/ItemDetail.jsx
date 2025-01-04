@@ -8,22 +8,26 @@ export default function ItemDetail({ id, title, image, category, description, pr
     const [contAdded, setContAdded] = useState(0);
     const { addItem } = useContext(CartContext);
 
-    // modificacion (en prueba : renderiza duplicado en Cart)
-    useEffect(() => {
-        const agregar = () => {
-            handleOnAdd();
-        }
-        window.addEventListener('onClick', agregar);
-        return () => {
-            window.removeEventListener('onClick', agregar);
-        }
-    }, []);
-
-    const handleOnAdd = (cont) => {
+    const onAdd = (cont) => {
         setContAdded(cont)
         const item = { id, title, price }
         addItem(item, cont);
     }
+
+
+    // modificacion (en prueba : renderiza duplicado en Cart)
+    /*useEffect(() => {
+        const handleOnAdd = (cont) => {
+            setContAdded(cont)
+            const item = { id, title, price }
+            addItem(item, cont);
+        }
+        document.addEventListener("click", handleOnAdd );
+        return () => {
+            document.removeEventListener("click", handleOnAdd  );
+        }
+    }, []);*/
+
 
     return (
         <div className='detail-container'>
@@ -42,7 +46,7 @@ export default function ItemDetail({ id, title, image, category, description, pr
                 {contAdded > 0 ? (
                     <Link to='/cart' className='Option' >terminar compra</Link>
                 ) : (
-                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                    <ItemCount initial={1} stock={stock} onAdd={onAdd} />
                 )
                 }
             </section>
@@ -50,3 +54,12 @@ export default function ItemDetail({ id, title, image, category, description, pr
     );
 }
 
+/*
+
+ const handleOnAdd = (cont) => {
+        setContAdded(cont)
+        const item = { id, title, price }
+        addItem(item, cont);
+    }
+
+*/
